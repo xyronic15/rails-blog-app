@@ -1,0 +1,11 @@
+<div class="m-4">
+  <h2 class="my-0 flex flex-row gap-4">
+    <%= link_to blog_post.title, blog_post %>
+    <% if blog_post.draft? %>
+      <div class="p-2 rounded bg-gray-100 text-gray-900 text-sm">Draft</div>
+    <% elsif blog_post.scheduled? %>
+      <div class="p-2 rounded bg-slate-300 text-gray-900 text-sm">Scheduled</div>
+    <% end %>
+  </h2>
+  <%= blog_post.content %>
+</div>
