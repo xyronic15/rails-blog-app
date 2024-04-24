@@ -1,12 +1,4 @@
 <h1>My Blog</h1>
-<div>
-    <%# <% @blog_posts.each do |post| %>
-        <%# <div> %>
-        <%# <h2> %>
-        <%# <%= link_to post.title, post %>
-        <%# </h2> %>
-        <%# <%= post.body %>
-        <%# </div> %>
-        <%# <% end %>
-        <%= render @blog_posts %>
-    </div>
+<div class="flex flex-col divide-y divide-gray-200">
+  <%= render @blog_posts %>
+</div>

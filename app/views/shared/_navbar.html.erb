@@ -1,0 +1,11 @@
+<nav class="border-b-2 border-gray-400 prose mx-auto py-3 px-1 flex gap-4 mb-2">
+  <%= link_to "Home", root_path, class: "no-underline rounded px-2 py-1 hover:bg-gray-100" %>
+  <% if user_signed_in? %>
+    <%= link_to "New blog post", new_blog_post_path, class: "no-underline rounded px-2 py-1 hover:bg-gray-100" %>
+    <%= link_to "Profile", edit_user_registration_path, class: "no-underline rounded px-2 py-1 hover:bg-gray-100" %>
+    <%= button_to "Log out", destroy_user_session_path, class: "no-underline rounded px-2 py-1 hover:bg-gray-100", method: :delete %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path, class: "no-underline rounded px-2 py-1 hover:bg-gray-100" %>
+    <%= link_to "Sign up", new_user_registration_path, class: "no-underline rounded px-2 py-1 hover:bg-gray-100" %>
+  <% end %>
+</nav>
